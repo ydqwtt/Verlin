@@ -22,6 +22,7 @@ public class CountryServiceTest extends SpringTestCase{
 		List<CountryEntity> list = countryService.selectAll(new RowBounds(1, 10));
 		CountryEntity c = list.get(0);
 		System.out.println(c.getCountryName());
+		System.out.println(c.getCountryCode());
 		System.out.println(list.size());
 		 //新增PageInfo对象，对返回结果进行封装
         PageInfo<CountryEntity> page = new PageInfo<CountryEntity>(list);
